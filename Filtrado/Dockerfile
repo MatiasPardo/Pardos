@@ -12,13 +12,6 @@ RUN apt-get update && apt-get install -y \
     lsb-release \
     && rm -rf /var/lib/apt/lists/*
 
-# Add NVIDIA TensorRT repository
-RUN apt-get update && \
-    wget https://developer.download.nvidia.com/compute/cuda/repos/$(lsb_release -cs)/x86_64/cuda-keyring_1.0-1_all.deb && \
-    dpkg -i cuda-keyring_1.0-1_all.deb && \
-    apt-get update && apt-get install -y tensorrt && \
-    rm -rf /var/lib/apt/lists/*
-
 # Copy the requirements file to the working directory
 COPY requirements.txt .
 
