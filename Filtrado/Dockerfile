@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
-    tensorrt 
+    tensorrt \ 
     && rm -rf /var/lib/apt/lists/*
 # Copy the requirements to the working directory
 COPY requirements.txt .
