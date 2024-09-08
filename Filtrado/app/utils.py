@@ -5,7 +5,7 @@ import cv2
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 
-loaded_model = load_model('VGG_model_other.h5')
+loaded_model = load_model('VGG_model_old.h5')
 
 label_to_class_name = {0: 'Cyst', 1: 'Normal', 2: 'Other', 3: 'Stone', 4: 'Tumor'}
 
