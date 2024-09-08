@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 
 loaded_model = load_model('VGG_model.h5')
 
-label_to_class_name = {0: 'Cyst', 1: 'Normal', 2: 'Stone', 3: 'Tumor'}
+label_to_class_name = {0: 'Cyst', 1: 'Normal', 2: 'Other', 3: 'Stone', 4: 'Tumor'}
 
 def predict_class(img):
     """
