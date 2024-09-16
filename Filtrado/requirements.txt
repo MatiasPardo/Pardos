@@ -1,5 +1,4 @@
-tensorflow==2.5.0
-keras==2.4.3
+tensorflow==2.15.0
 Flask
 flask_sqlalchemy
 opencv-python
