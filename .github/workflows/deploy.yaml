@@ -46,4 +46,6 @@ jobs:
         username: ${{ secrets.DROPLET_USER }}
         password: ${{ secrets.DROPLET_PASSWORD }}
         script: |
-          /home/ia/ia-cicd.sh ${{ github.sha }}
+          cd /home/ia
+          ./ia-cicd.sh ${{ github.sha }}
+
