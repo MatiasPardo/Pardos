@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 ENV OLLAMA_HOST=0.0.0.0
 COPY ./run-ollama.sh ./run-ollama.sh
 # Install Ollama (Adjust this command if there's a specific installation method for Ollama)
-RUN curl -fsSL https://ollama.com/install.sh | sh
+RUN curl -fsSL https://ollama.com/install.sh | sh -x
 # Copy your local files to the container (Adjust the path as needed)
 COPY diag /app
 RUN chmod +x run-ollama.sh \
