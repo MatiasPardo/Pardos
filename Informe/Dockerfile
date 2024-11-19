@@ -8,8 +8,10 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     curl \
     git \
+    lshw \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
+    
 RUN apt-get install -y pciutils || true
 ENV OLLAMA_HOST=0.0.0.0
 COPY ./run-ollama.sh ./run-ollama.sh
