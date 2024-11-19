@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     git \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y pciutils || true
 ENV OLLAMA_HOST=0.0.0.0
 COPY ./run-ollama.sh ./run-ollama.sh
 # Install Ollama (Adjust this command if there's a specific installation method for Ollama)
