@@ -15,9 +15,12 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get install -y pciutils || true
 ENV OLLAMA_HOST=0.0.0.0
 COPY ./run-ollama.sh ./run-ollama.sh
+COPY ./install.sh ./install.sh
 # Install Ollama (Adjust this command if there's a specific installation method for Ollama)
-RUN curl -fsSL https://ollama.com/install.sh | sh -x 2>/dev/null
+#RUN curl -fsSL https://ollama.com/install.sh | sh -x 2>/dev/null
 # Copy your local files to the container (Adjust the path as needed)
+RUN chmod +x install.sh \
+    && ./install.sh
 COPY diag /app
 RUN chmod +x run-ollama.sh \
     && ./run-ollama.sh
