@@ -1,6 +1,0 @@
-tensorflow==2.15.0
-Flask
-flask_sqlalchemy
-opencv-python
-pandas
-matplotlib
